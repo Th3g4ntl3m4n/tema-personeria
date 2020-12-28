@@ -4,28 +4,28 @@
    <div class="container">
        <div class="row">
            <!-- Articulo  -->
-           <div class="col-12 col-md-9">
-               <img src="assets/Personeriapiedecuesta-cumplimientodelanorma.png" alt="" class="img-fluid">
-               <h2 class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore exercitationem, quod at aliquam sequi quisquam architecto numquam nostrum voluptas aliquid et sint repellat dolorum deserunt quos maxime nisi expedita.</h2>
-                <p class="lead">Fecha</p>
-                <div class="text-justify">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad blanditiis labore nemo ducimus aut asperiores inventore iure facere commodi. Temporibus repudiandae eligendi distinctio, expedita similique reprehenderit enim deleniti consectetur!</p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad blanditiis labore nemo ducimus aut asperiores inventore iure facere commodi. Temporibus repudiandae eligendi distinctio, expedita similique reprehenderit enim deleniti consectetur!</p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad blanditiis labore nemo ducimus aut asperiores inventore iure facere commodi. Temporibus repudiandae eligendi distinctio, expedita similique reprehenderit enim deleniti consectetur!</p>
-                    
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad blanditiis labore nemo ducimus aut asperiores inventore iure facere commodi. Temporibus repudiandae eligendi distinctio, expedita similique reprehenderit enim deleniti consectetur!</p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad blanditiis labore nemo ducimus aut asperiores inventore iure facere commodi. Temporibus repudiandae eligendi distinctio, expedita similique reprehenderit enim deleniti consectetur!</p>
+           <div class="col-12 col-md-9 my-5">
 
+           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+               <?php if ( has_post_thumbnail()) {
+                   the_post_thumbnail('post-thumbnails' , array ('class' => ' img-fluid'));
+               } ?>
+               <h2 class="my-3"><?php the_title(); ?></h2>
+                <p class="lead"><?php echo get_the_date(); ?></p>
+                <div class="text-justify">
+                   
+                <?php the_content(); ?>
                 </div>
            </div>
             <!-- aside -->
 
    <div class="col-12 col-md-3">
-    <div class="my-3">
-        <h3> Lorem Impresum</h3>
-        <img src="assets/Imagen campaña.png" alt="" class="img-fluid">
-    </div>
+       <!-- LLama a los aside o sidebar sidebar.php -->
+   <?php get_sidebar(); ?>
    </div>
+
+
 <!-- fin aside -->
        </div>
    </div>

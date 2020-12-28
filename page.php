@@ -3,6 +3,7 @@
    <!-- contenido Menu -->
    <div class="container my-5">
 
+<!--- Loop de worpress para contenido dinamico -->
 
 <?php if ( have_posts()) : while (have_posts()) : the_post(); ?>
 
