@@ -1,0 +1,19 @@
+/*
+Theme Name: personeria municipal de piedecuesta
+Author: the Cybersecurity team
+Author URI: http://www.cybersecurity.com.co/
+Description: Tema frabricado para la personeria municipal de piedecuesta 26-12-2020
+Version: 1.0
+tags: Personeria, Piedecuesta, single, ligth.
+*/
+
+.suscribir{
+    background: url();
+    background-size: cover ;
+    background-position: center;
+    height: 400px ;
+}
+
+.footer{
+    background-color: #959595;
+}
